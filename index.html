@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aakash Shah — Applied AI / Forward-Deployed Engineer</title>
-  <meta name="description" content="Aakash Shah builds LLM systems that survive contact with production — clinical AI compliance, agent reliability research, evals, guardrails, and live operations. Open to forward-deployed and applied AI roles.">
+  <meta name="description" content="Aakash Shah builds LLM systems that survive contact with production — five years of applied AI inside Medtronic Diabetes, clinical-AI compliance tooling, and agent-reliability research. Open to forward-deployed and applied AI roles.">
   <meta property="og:title" content="Aakash Shah — Applied AI / Forward-Deployed Engineer">
-  <meta property="og:description" content="AI that survives contact with production. ClinicSentry, StressBench, multi-agent systems, evals & guardrails — shipped end-to-end.">
+  <meta property="og:description" content="AI that survives contact with production. Applied AI at Medtronic Diabetes, ClinicSentry, StressBench — regulated-healthcare AI shipped end-to-end.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aakash1411.github.io">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Aakash Shah — Applied AI / Forward-Deployed Engineer">
-  <meta name="twitter:description" content="AI that survives contact with production. ClinicSentry, StressBench, agents, evals & guardrails.">
+  <meta name="twitter:description" content="AI that survives contact with production. Applied AI at Medtronic Diabetes, ClinicSentry, StressBench — evals & guardrails.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -228,7 +228,6 @@
     .log-rows .st { flex: none; font-size: 10.5px; letter-spacing: 1px; }
     .st-ok { color: var(--ok); }
     .st-amber { color: var(--amber); }
-    .st-run { color: var(--amber); animation: blinkSoft 1.6s steps(2, start) infinite; }
     @keyframes blinkSoft { 50% { opacity: .35; } }
 
     .log-prompt {
@@ -311,18 +310,22 @@
     .tags span:not(:first-child)::before { content: '·'; position: absolute; left: 2px; color: var(--line); }
 
     /* ════════════════════════════════════════════
-       ALSO SHIPPED GRID
+       MEDTRONIC CASE FILES
     ════════════════════════════════════════════ */
-    .ship-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); }
-    .ship-cell { background: var(--ink); padding: 30px 30px 26px; transition: background .35s var(--ease); position: relative; }
-    .ship-cell:hover { background: var(--panel); }
-    .ship-cell h4 { font-family: var(--serif); font-size: 20px; font-weight: 420; margin: 12px 0 8px; }
-    .ship-cell p { font-size: 13.5px; color: var(--dim); line-height: 1.7; }
-    .ship-top { display: flex; justify-content: space-between; align-items: center; }
-    .ship-kind { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
-    .ship-link { font-family: var(--mono); font-size: 11px; color: var(--amber); opacity: 0; transform: translateX(-4px); transition: all .3s var(--ease); }
-    .ship-cell:hover .ship-link { opacity: 1; transform: translateX(0); }
-    .ship-cell .stretch::after { content: ''; position: absolute; inset: 0; }
+    .sec-intro { font-size: 15.5px; color: var(--dim); line-height: 1.75; max-width: 740px; margin: -24px 0 14px; }
+    .sec-intro strong { color: var(--bone); font-weight: 400; }
+    .sec-intro em { color: var(--muted); }
+    .case-cols { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(20px, 3.5vw, 44px); margin-top: 18px; }
+    .case-label { font-family: var(--mono); font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .case-label::before { content: '▸ '; color: var(--amber); }
+    .case-problem { border-left: 2px solid var(--amber-dim); padding-left: 18px; }
+    .case-problem p { font-size: 14.5px; font-style: italic; color: var(--dim); line-height: 1.7; }
+    .case-shipped p { font-size: 14.5px; color: var(--dim); line-height: 1.7; }
+    .case-shipped strong { color: var(--bone); font-weight: 400; }
+    .case-more { margin-top: 44px; font-size: 14px; color: var(--muted); font-style: italic; max-width: 740px; }
+    .case-more b { color: var(--dim); font-weight: 400; font-style: normal; }
+    .work-foot .tags:only-child { margin-left: 0; }
+    @media (max-width: 800px) { .case-cols { grid-template-columns: 1fr; gap: 16px; } }
 
     /* ════════════════════════════════════════════
        RESEARCH
@@ -346,7 +349,7 @@
     /* ════════════════════════════════════════════
        WRITING
     ════════════════════════════════════════════ */
-    .writing-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+    .writing-col { max-width: 680px; }
     .col-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; }
     .col-head h3 { font-family: var(--serif); font-size: 26px; font-weight: 420; }
     .col-head a { font-family: var(--mono); font-size: 11px; color: var(--amber); letter-spacing: 1px; }
@@ -358,15 +361,6 @@
     .post-list a::before { content: '▸'; font-family: var(--mono); font-size: 11px; color: var(--muted); transition: color .3s; }
     .post-list a:hover { color: var(--bone); padding-left: 8px; }
     .post-list a:hover::before { color: var(--amber); }
-
-    .sprint-card { background: var(--panel); border: 1px solid var(--line); padding: 28px; position: relative; }
-    .sprint-card::before { content: ''; position: absolute; top: -1px; left: -1px; width: 14px; height: 14px; border: solid var(--amber); border-width: 2px 0 0 2px; }
-    .sprint-card h3 { font-family: var(--serif); font-size: 24px; font-weight: 420; margin-bottom: 10px; }
-    .sprint-card p { font-size: 14px; color: var(--dim); line-height: 1.7; }
-    .sprint-bar { font-family: var(--mono); font-size: 13px; margin: 22px 0 6px; color: var(--amber); letter-spacing: -1px; word-break: break-all; }
-    .sprint-bar .rest { color: var(--line); }
-    .sprint-meta { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; display: flex; justify-content: space-between; }
-    .sprint-links { margin-top: 22px; display: flex; gap: 8px; flex-wrap: wrap; }
 
     /* ════════════════════════════════════════════
        STACK
@@ -429,11 +423,14 @@
        RESPONSIVE
     ════════════════════════════════════════════ */
     @media (max-width: 960px) {
-      .hero-grid, .writing-grid, .contact-grid { grid-template-columns: 1fr; }
+      .logo .path { display: none; }
+      .nav-links { gap: 14px; }
+      .nav-links a { font-size: 10.5px; letter-spacing: 1.2px; }
+      .hero-grid, .contact-grid { grid-template-columns: 1fr; }
       .work-row { grid-template-columns: 1fr; gap: 18px; padding: 40px 0; }
       .work-num { font-size: 44px; }
       .work-meta { flex-direction: row; align-items: center; flex-wrap: wrap; margin-top: 8px; }
-      .ship-grid, .stack-grid { grid-template-columns: 1fr; }
+      .stack-grid { grid-template-columns: 1fr; }
       #top { padding-top: 148px; }
     }
     @media (max-width: 680px) {
@@ -456,10 +453,10 @@
     <div class="container">
       <a href="#top" class="logo">aakash shah<span class="path"> / applied-ai</span></a>
       <ul class="nav-links">
-        <li><a href="#work">Work</a></li>
+        <li><a href="#medtronic">Medtronic</a></li>
+        <li><a href="#work">Projects</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="#writing">Writing</a></li>
-        <li><a href="#stack">Stack</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#contact" class="status-pill"><span class="dot" aria-hidden="true"></span>Open to FDE roles</a>
@@ -475,11 +472,12 @@
           <h1>AI that survives <em>contact with production.</em></h1>
           <p class="lede">
             I build LLM systems for places where a wrong answer costs something —
-            <strong>clinical workflows, compliance, live operations</strong>. Retrieval, agents,
-            evaluation and guardrails, owned end-to-end: from the first prototype to the audit trail.
+            <strong>clinical workflows, compliance, live operations</strong>. Five years doing it
+            inside <strong>Medtronic Diabetes</strong>: taking ambiguous, regulated problems
+            end-to-end, from the first prototype to the audit trail.
           </p>
           <div class="hero-actions">
-            <a href="#work" class="btn btn-amber">View the work ↓</a>
+            <a href="#medtronic" class="btn btn-amber">View the work ↓</a>
             <a href="mailto:aakashs1411@gmail.com" class="btn btn-ghost">aakashs1411@gmail.com</a>
           </div>
         </div>
@@ -509,10 +507,10 @@
               <span class="st st-ok">IN PRODUCTION</span>
             </li>
             <li>
-              <time>now</time>
-              <span class="what">agentic-ai sprint · day <span id="sprint-day">21</span>/60</span>
+              <time datetime="2021">2021→26</time>
+              <span class="what">medtronic · applied-ai case files</span>
               <span class="leader" aria-hidden="true"></span>
-              <span class="st st-run" id="sprint-status">RUNNING</span>
+              <span class="st st-ok">SHIPPED</span>
             </li>
           </ol>
           <div class="log-prompt" aria-hidden="true">$ <span class="caret"></span></div>
@@ -526,17 +524,240 @@
     <div class="container">
       <div class="proof-row">
         <span class="proof-item"><span class="cmd">$ pip install clinicsentry</span></span>
+        <span class="proof-item"><b>5</b> yrs applied AI at Medtronic Diabetes</span>
         <span class="proof-item"><b>3</b> peer-reviewed publications</span>
-        <span class="proof-item"><b>10</b> systems shipped end-to-end</span>
         <span class="proof-item"><b>15</b> open-source agent skills</span>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════ SELECTED WORK ═══════════ -->
-  <section id="work">
+  <!-- ═══════════ MEDTRONIC ═══════════ -->
+  <section id="medtronic">
     <div class="container">
-      <div class="sec-label reveal"><span class="idx">01</span><span class="name">Selected work</span></div>
+      <div class="sec-label reveal"><span class="idx">01</span><span class="name">Medtronic — applied AI in regulated healthcare</span></div>
+      <p class="sec-intro reveal">
+        Five years embedded with clinical, support, regulatory and platform teams at
+        <strong>Medtronic Diabetes</strong> (2021→2026). The pattern repeats: an ambiguous ask, no
+        spec, PHI everywhere, and a compliance bar most AI never clears. I take these problems
+        end-to-end — framing, data, model, guardrails, infrastructure, deployment — until they're
+        systems people rely on. <em>Details below are deliberately generalized to respect
+        confidentiality; deeper walkthroughs available in conversation.</em>
+      </p>
+
+      <!-- M01 — RAG support assistant -->
+      <article class="work-row reveal">
+        <div>
+          <div class="work-num" aria-hidden="true">01</div>
+          <div class="work-meta">
+            <span class="badge badge-research"><span class="bdot" aria-hidden="true"></span>Patient support</span>
+            <span class="work-year">Production-ready</span>
+          </div>
+        </div>
+        <div class="work-body">
+          <h3>Grounded support assistant <span class="sub">— RAG that can't invent device instructions</span></h3>
+          <div class="case-cols">
+            <div class="case-problem">
+              <p class="case-label">The problem</p>
+              <p>A diabetes-device companion app generates thousands of repetitive, safety-sensitive
+              support questions. Support teams can't scale with them — and a chatbot that invents
+              medical-device instructions isn't a UX bug, it's a patient-safety incident.</p>
+            </div>
+            <div class="case-shipped">
+              <p class="case-label">What I shipped</p>
+              <p>A grounded RAG service on AWS Bedrock: <strong>hybrid retrieval</strong> (vector +
+              BM25) with Cohere reranking, generation locked to approved documentation — verbatim
+              citations, novel numbers rejected by a hallucination filter. Query-aware model routing,
+              context compression and prompt caching cut latency and cost; an inline relevancy judge
+              rejects bad context with zero extra LLM calls. PII detection, prompt-injection blocking
+              and out-of-scope refusal guard the edges — and <strong>every deploy is gated on a
+              129-question golden-set eval harness</strong>.</p>
+            </div>
+          </div>
+          <p class="work-proof">−173 ms end-to-end P50 &nbsp;·&nbsp; −19% cost per query &nbsp;·&nbsp; 92% test coverage &nbsp;·&nbsp; eval-gated deploys</p>
+          <div class="work-foot">
+            <div class="tags"><span>Bedrock</span><span>OpenSearch</span><span>Cohere Rerank</span><span>Lambda</span><span>CloudFormation</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- M02 — privacy-safe clinical LLM services -->
+      <article class="work-row reveal">
+        <div>
+          <div class="work-num" aria-hidden="true">02</div>
+          <div class="work-meta">
+            <span class="badge badge-research"><span class="bdot" aria-hidden="true"></span>Clinical data</span>
+            <span class="work-year">Deploy-ready</span>
+          </div>
+        </div>
+        <div class="work-body">
+          <h3>Privacy-safe clinical LLM services <span class="sub">— AI where PHI usually stops it</span></h3>
+          <div class="case-cols">
+            <div class="case-problem">
+              <p class="case-label">The problem</p>
+              <p>Clinicians drown in raw device telemetry and can't ask simple cohort questions in
+              plain English. PHI makes most AI approaches a non-starter before they begin.</p>
+            </div>
+            <div class="case-shipped">
+              <p class="case-label">What I shipped</p>
+              <p>Two serverless LLM services: a patient-data summarizer, and a natural-language query
+              engine that compiles plain English into an <strong>executable, validated filter
+              DSL</strong>. Every request passes through PHI redaction, KMS encryption and audit
+              logging behind a versioned OpenAPI contract — the compliance last mile solved first,
+              not bolted on.</p>
+            </div>
+          </div>
+          <p class="work-proof">PHI redaction + KMS + audit on every request &nbsp;·&nbsp; plain English → executable cohort filters</p>
+          <div class="work-foot">
+            <div class="tags"><span>Bedrock</span><span>Lambda</span><span>KMS</span><span>API Gateway</span><span>OpenAPI</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- M03 — regulatory intelligence -->
+      <article class="work-row reveal">
+        <div>
+          <div class="work-num" aria-hidden="true">03</div>
+          <div class="work-meta">
+            <span class="badge badge-research"><span class="bdot" aria-hidden="true"></span>Regulatory intel</span>
+            <span class="work-year">Deployed</span>
+          </div>
+        </div>
+        <div class="work-body">
+          <h3>Regulatory-intelligence platform <span class="sub">— watching eight regulators so humans don't have to</span></h3>
+          <div class="case-cols">
+            <div class="case-problem">
+              <p class="case-label">The problem</p>
+              <p>Regulatory teams manually monitored eight international medical-device regulators
+              for changes that carry legal weight — slow, error-prone, and easy to miss.</p>
+            </div>
+            <div class="case-shipped">
+              <p class="case-label">What I shipped</p>
+              <p>A serverless pipeline that scrapes all eight sources in parallel via Step Functions,
+              classifies relevance with an LLM backed by a <strong>deterministic rule-based safety
+              net</strong> — compliance-grade reliability means the model never gets the last word —
+              and delivers a consolidated report on demand, behind enterprise SSO with a React
+              front end.</p>
+            </div>
+          </div>
+          <p class="work-proof">8 regulators → one on-demand report &nbsp;·&nbsp; LLM judgment + deterministic override</p>
+          <div class="work-foot">
+            <div class="tags"><span>Step Functions</span><span>Bedrock</span><span>React</span><span>DynamoDB</span><span>Azure AD</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- M04 — release engineering automation -->
+      <article class="work-row reveal">
+        <div>
+          <div class="work-num" aria-hidden="true">04</div>
+          <div class="work-meta">
+            <span class="badge badge-research"><span class="bdot" aria-hidden="true"></span>Regulated QA</span>
+            <span class="work-year">In internal use</span>
+          </div>
+        </div>
+        <div class="work-body">
+          <h3>Release-engineering automation platform <span class="sub">— GenAI drafts, humans sign off</span></h3>
+          <div class="case-cols">
+            <div class="case-problem">
+              <p class="case-label">The problem</p>
+              <p>Preparing regulated release documentation meant reconciling a PLM system against an
+              issue tracker by hand — weeks of error-prone work where one missed inconsistency
+              surfaces later, in an audit.</p>
+            </div>
+            <div class="case-shipped">
+              <p class="case-label">What I shipped</p>
+              <p>A full-stack React + FastAPI platform with <strong>15 tools</strong>: GenAI-assisted
+              document drafting and review kept strictly behind human sign-off, automated
+              traceability and cross-system consistency checks between PLM and issue tracking, and
+              long-running jobs streamed live over WebSockets. Dockerized, enterprise-authenticated,
+              adopted for real release work.</p>
+            </div>
+          </div>
+          <p class="work-proof">15 tools &nbsp;·&nbsp; PLM ↔ issue-tracker reconciliation automated &nbsp;·&nbsp; GenAI drafts, humans decide</p>
+          <div class="work-foot">
+            <div class="tags"><span>React 18</span><span>FastAPI</span><span>WebSockets</span><span>Jira</span><span>Windchill PLM</span><span>Bedrock</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- M05 — root-cause timeline -->
+      <article class="work-row reveal">
+        <div>
+          <div class="work-num" aria-hidden="true">05</div>
+          <div class="work-meta">
+            <span class="badge badge-research"><span class="bdot" aria-hidden="true"></span>Support ops</span>
+            <span class="work-year">Deploy-ready</span>
+          </div>
+        </div>
+        <div class="work-body">
+          <h3>Device-issue root-cause timeline <span class="sub">— three log systems, one answer</span></h3>
+          <div class="case-cols">
+            <div class="case-problem">
+              <p class="case-label">The problem</p>
+              <p>To explain a single device issue, support agents cross-referenced three disjoint
+              log systems by hand — and still couldn't see the sequence of events.</p>
+            </div>
+            <div class="case-shipped">
+              <p class="case-label">What I shipped</p>
+              <p>A unified, severity-ranked timeline: Glue ETL normalizes the three sources into
+              partitioned Parquet, a Lambda API serves an Angular front end, and a configurable
+              fault tree encodes <strong>domain expertise as editable rules</strong> instead of
+              hardcoded logic. Hashed patient identifiers and enterprise JWT auth throughout.</p>
+            </div>
+          </div>
+          <p class="work-proof">3 log systems → one ranked timeline &nbsp;·&nbsp; domain logic as editable config &nbsp;·&nbsp; PHI-aware by design</p>
+          <div class="work-foot">
+            <div class="tags"><span>Angular</span><span>Glue ETL</span><span>Parquet</span><span>Lambda</span><span>Azure AD</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- M06 — glucose insights engine -->
+      <article class="work-row reveal">
+        <div>
+          <div class="work-num" aria-hidden="true">06</div>
+          <div class="work-meta">
+            <span class="badge badge-research"><span class="bdot" aria-hidden="true"></span>Clinical ML</span>
+            <span class="work-year">Feasibility</span>
+          </div>
+        </div>
+        <div class="work-body">
+          <h3>Glucose insights engine <span class="sub">— from raw telemetry to a daily "so what"</span></h3>
+          <div class="case-cols">
+            <div class="case-problem">
+              <p class="case-label">The problem</p>
+              <p>Patients get raw glucose and insulin telemetry but no daily, actionable insight.
+              The product team needed to know whether meal-driven insights were even feasible —
+              before betting a roadmap on it.</p>
+            </div>
+            <div class="case-shipped">
+              <p class="case-label">What I shipped</p>
+              <p>An end-to-end feasibility pipeline: Redshift SQL faithfully reconstructs therapy
+              data into Parquet, a <strong>72-feature meal-detection classifier</strong> flags
+              events, and pharmacokinetic modeling plus clinical thresholding turn them into
+              device-specific, personalized insights — de-risking the product decision with
+              evidence instead of opinion.</p>
+            </div>
+          </div>
+          <p class="work-proof">72-feature meal-detection model &nbsp;·&nbsp; documented Redshift → Parquet inference pipeline</p>
+          <div class="work-foot">
+            <div class="tags"><span>Python</span><span>Redshift</span><span>Parquet</span><span>Logistic regression</span></div>
+          </div>
+        </div>
+      </article>
+
+      <p class="case-more reveal">
+        <b>Also at Medtronic:</b> predictive glucose-event ML (XGBoost), closed-loop therapy
+        simulation, PHI-free synthetic data generation, SOP-driven validation of AI coding tools,
+        an internal MCP-based AI-tooling provisioning platform, and a centralized patient data lake.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════ OPEN SOURCE & INDEPENDENT BUILDS ═══════════ -->
+  <section id="work" style="padding-top:0">
+    <div class="container">
+      <div class="sec-label reveal"><span class="idx">02</span><span class="name">Open source &amp; independent builds</span></div>
 
       <!-- ClinicSentry -->
       <article class="work-row reveal">
@@ -680,61 +901,32 @@
         </div>
       </article>
 
-      <!-- RAGchat -->
+      <!-- Agent Skills -->
       <article class="work-row reveal">
         <div>
           <div class="work-num" aria-hidden="true">06</div>
           <div class="work-meta">
-            <span class="badge badge-prod"><span class="bdot" aria-hidden="true"></span>Live demo</span>
+            <span class="badge badge-oss"><span class="bdot" aria-hidden="true"></span>Open source</span>
             <span class="work-year">2026</span>
           </div>
         </div>
         <div class="work-body">
-          <h3>RAGchat <span class="sub">— seven RAG architectures you can poke at in the browser</span></h3>
+          <h3>Agent Skills <span class="sub">— packaged judgment for AI coding agents</span></h3>
           <p class="work-desc">
-            An interactive explorer for retrieval-architecture tradeoffs — from naive chunking to hybrid
-            search with re-ranking — with document processing running <strong>fully in-browser via
-            Transformers.js</strong>, or against a local Ollama. Built to make retrieval failure modes
-            visible instead of theoretical.
+            A library of 15 reusable skills for AI coding agents (Claude Code, Cursor, Windsurf):
+            TDD enforcement, structured root-cause analysis, CI/CD generation, resilience patterns,
+            container optimization, secrets management. Each skill encodes a senior engineer's
+            checklist as instructions an agent actually follows — installable globally or
+            per-workspace with one command.
           </p>
-          <p class="work-proof">runs client-side &nbsp;·&nbsp; no server, no signup &nbsp;·&nbsp; 7 architectures side by side</p>
+          <p class="work-proof">15 skills across the SDLC &nbsp;·&nbsp; single-command install &nbsp;·&nbsp; works across agent tools</p>
           <div class="work-foot">
-            <a class="chip" href="https://rag-explorer.pages.dev" target="_blank" rel="noopener">Live ↗</a>
-            <a class="chip" href="https://github.com/aakash1411/applied-ai-systems" target="_blank" rel="noopener">Code ↗</a>
-            <div class="tags"><span>React</span><span>Transformers.js</span><span>Ollama</span><span>Vite</span></div>
+            <a class="chip" href="https://github.com/aakash1411/agent-skills" target="_blank" rel="noopener">Code ↗</a>
+            <div class="tags"><span>Markdown</span><span>Shell</span><span>GitHub Actions</span></div>
           </div>
         </div>
       </article>
 
-    </div>
-  </section>
-
-  <!-- ═══════════ ALSO SHIPPED ═══════════ -->
-  <section id="shipped" style="padding-top:0">
-    <div class="container">
-      <div class="sec-label reveal"><span class="idx">02</span><span class="name">Also shipped</span></div>
-      <div class="ship-grid reveal">
-        <div class="ship-cell">
-          <div class="ship-top"><span class="ship-kind">Open source · Dev tooling</span><span class="ship-link">↗</span></div>
-          <h4><a class="stretch" href="https://github.com/aakash1411/agent-skills" target="_blank" rel="noopener">Agent Skills</a></h4>
-          <p>15 reusable skills for AI coding agents (Claude Code, Cursor, Windsurf): TDD enforcement, root-cause analysis, CI/CD generation, resilience patterns, secrets management. One-line install.</p>
-        </div>
-        <div class="ship-cell">
-          <div class="ship-top"><span class="ship-kind">iOS + Android · Flutter</span><span class="ship-link">↗</span></div>
-          <h4><a class="stretch" href="https://github.com/aakash1411/ephimeries" target="_blank" rel="noopener">Ephimeries</a></h4>
-          <p>Vedic astrology ephemeris app built on the Swiss Ephemeris engine — charts and dasha calculations offline. 142/142 tests green; App Store submission pipeline in place.</p>
-        </div>
-        <div class="ship-cell">
-          <div class="ship-top"><span class="ship-kind">iOS · SwiftUI</span><span class="ship-link">↗</span></div>
-          <h4><a class="stretch" href="https://github.com/aakash1411/Awakened" target="_blank" rel="noopener">Awakened</a></h4>
-          <p>Solo-Leveling-inspired fitness RPG: real workouts feed an XP system with ranks E→SSS, daily quests, streak bonuses and a pentagon stat radar.</p>
-        </div>
-        <div class="ship-cell">
-          <div class="ship-top"><span class="ship-kind">Mobile · React + Capacitor</span></div>
-          <h4>MilesTogether</h4>
-          <p>Community running-club app — challenges, events, plans and stats — with a watchOS companion for on-wrist tracking.</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -785,35 +977,20 @@
   <!-- ═══════════ WRITING ═══════════ -->
   <section id="writing" style="padding-top:0">
     <div class="container">
-      <div class="sec-label reveal"><span class="idx">04</span><span class="name">Writing &amp; building in public</span></div>
-      <div class="writing-grid">
-        <div class="reveal">
-          <div class="col-head">
-            <h3>Human in the Loop</h3>
-            <a href="https://humanloopai.substack.com" target="_blank" rel="noopener">Substack ↗</a>
-          </div>
-          <p class="col-sub">Field notes from building AI systems that have to work.</p>
-          <ul class="post-list" id="substack-posts">
-            <li><a href="https://substack.com/home/post/p-189421140" target="_blank" rel="noopener">Why I Built 15 Skills for AI Coding Agents</a></li>
-          </ul>
-          <div class="work-foot" style="margin-top:22px">
-            <a class="chip" href="https://medium.com/@aakashs11" target="_blank" rel="noopener">Medium · weekly case studies ↗</a>
-            <a class="chip" href="https://www.linkedin.com/in/aakashs14/" target="_blank" rel="noopener">LinkedIn · daily build notes ↗</a>
-          </div>
+      <div class="sec-label reveal"><span class="idx">04</span><span class="name">Writing</span></div>
+      <div class="writing-col reveal">
+        <div class="col-head">
+          <h3>Human in the Loop</h3>
+          <a href="https://humanloopai.substack.com" target="_blank" rel="noopener">Substack ↗</a>
         </div>
-        <aside class="sprint-card reveal" aria-label="60-day agentic AI sprint progress">
-          <h3>60-day agentic-AI sprint</h3>
-          <p>
-            Karpathy-style zero-to-hero, in public: tiny neural nets → tokenizers → agent loops from
-            scratch → LangGraph → multi-agent systems → hooks, harnesses &amp; observability →
-            red-teaming my own agents. Every day studied, built, and posted.
-          </p>
-          <div class="sprint-bar" id="sprint-bar" aria-hidden="true"></div>
-          <div class="sprint-meta"><span id="sprint-label">Day 21 of 60</span><span id="sprint-pct"></span></div>
-          <div class="sprint-links">
-            <a class="chip" href="https://www.linkedin.com/in/aakashs14/" target="_blank" rel="noopener">Follow along ↗</a>
-          </div>
-        </aside>
+        <p class="col-sub">Field notes from building AI systems that have to work.</p>
+        <ul class="post-list" id="substack-posts">
+          <li><a href="https://substack.com/home/post/p-189421140" target="_blank" rel="noopener">Why I Built 15 Skills for AI Coding Agents</a></li>
+        </ul>
+        <div class="work-foot" style="margin-top:22px">
+          <a class="chip" href="https://medium.com/@aakashs11" target="_blank" rel="noopener">Medium · engineering case studies ↗</a>
+          <a class="chip" href="https://www.linkedin.com/in/aakashs14/" target="_blank" rel="noopener">LinkedIn · build notes ↗</a>
+        </div>
       </div>
     </div>
   </section>
@@ -826,32 +1003,36 @@
         <div class="stack-cell">
           <h4><span class="n">A/</span>LLM systems</h4>
           <div class="stack-items">
-            <span>RAG &amp; hybrid retrieval</span><span>Agents &amp; tool-calling</span><span>MCP</span>
-            <span>LangGraph</span><span>LangChain</span><span>Evals — RAGAS · DeepEval · custom verifiers</span>
-            <span>Guardrails &amp; PII</span><span>Fine-tuning — QLoRA · Unsloth</span><span>Prompt engineering</span>
+            <span>RAG &amp; hybrid retrieval</span><span>AWS Bedrock</span><span>Agents &amp; tool-calling</span><span>MCP</span>
+            <span>LangGraph</span><span>LangChain</span><span>Evals — golden sets · RAGAS · custom verifiers</span>
+            <span>Guardrails &amp; PHI/PII</span><span>Model routing &amp; prompt caching</span>
+            <span>Fine-tuning — QLoRA · Unsloth</span>
           </div>
         </div>
         <div class="stack-cell">
-          <h4><span class="n">B/</span>Serving &amp; backend</h4>
+          <h4><span class="n">B/</span>Serving, data &amp; backend</h4>
           <div class="stack-items">
-            <span>Python</span><span>FastAPI</span><span>TypeScript / Node.js</span><span>PostgreSQL + pgvector</span>
-            <span>Redis</span><span>SQLite</span><span>vLLM</span><span>Ollama</span><span>OpenAI / Anthropic APIs</span>
+            <span>Python</span><span>FastAPI</span><span>TypeScript / Node.js</span>
+            <span>Lambda &amp; Step Functions</span><span>OpenSearch</span><span>DynamoDB</span>
+            <span>Redshift &amp; Glue ETL</span><span>PostgreSQL + pgvector</span><span>Redis</span>
+            <span>vLLM</span><span>Ollama</span><span>OpenAI / Anthropic APIs</span>
           </div>
         </div>
         <div class="stack-cell">
           <h4><span class="n">C/</span>Observability &amp; ops</h4>
           <div class="stack-items">
-            <span>Langfuse</span><span>LangSmith</span><span>OpenTelemetry</span><span>Grafana</span>
+            <span>CloudFormation IaC</span><span>KMS &amp; audit logging</span><span>Langfuse</span>
+            <span>LangSmith</span><span>OpenTelemetry</span><span>Grafana</span>
             <span>Weights &amp; Biases</span><span>MLflow</span><span>Docker</span><span>GitHub Actions</span>
-            <span>Railway</span><span>AWS</span>
+            <span>Railway</span>
           </div>
         </div>
         <div class="stack-cell">
           <h4><span class="n">D/</span>Product &amp; integration</h4>
           <div class="stack-items">
-            <span>Next.js / React</span><span>Tauri</span><span>Flutter</span><span>SwiftUI</span>
-            <span>Discord / Slack bots</span><span>Gmail &amp; Calendar APIs</span><span>OAuth + Keychain</span>
-            <span>Streamlit</span>
+            <span>Next.js / React</span><span>Angular</span><span>Tauri</span><span>Flutter</span>
+            <span>SwiftUI</span><span>Discord / Slack bots</span><span>Gmail &amp; Calendar APIs</span>
+            <span>Azure AD / Entra ID SSO</span><span>OAuth + Keychain</span>
           </div>
         </div>
       </div>
@@ -906,26 +1087,6 @@
       });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // ── 60-day sprint: live day counter + progress bar ──
-    (function sprint() {
-      const START = new Date('2026-06-12T00:00:00');
-      const TOTAL = 60;
-      const day = Math.min(TOTAL, Math.max(1, Math.floor((Date.now() - START) / 864e5) + 1));
-      const done = day >= TOTAL;
-      const CELLS = 30, filled = Math.round((day / TOTAL) * CELLS);
-
-      document.getElementById('sprint-day').textContent = day;
-      document.getElementById('sprint-label').textContent = done ? 'Complete — 60 of 60' : `Day ${day} of 60`;
-      document.getElementById('sprint-pct').textContent = Math.round((day / TOTAL) * 100) + '%';
-      document.getElementById('sprint-bar').innerHTML =
-        '█'.repeat(filled) + '<span class="rest">' + '░'.repeat(CELLS - filled) + '</span>';
-      if (done) {
-        const st = document.getElementById('sprint-status');
-        st.textContent = 'COMPLETE';
-        st.className = 'st st-ok';
-      }
-    })();
 
     // ── Substack feed (graceful fallback to static item) ──
     (function feed() {

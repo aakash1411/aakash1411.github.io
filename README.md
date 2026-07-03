@@ -14,10 +14,12 @@ Live at **https://aakash1411.github.io**.
 Everything lives in `index.html` (inline CSS + JS). The notable dynamic bits:
 
 - **Deploy log** (hero) — hand-edited list of current statuses
-- **60-day sprint counter** — computed from the `START` date in the `sprint()`
-  script; freezes at "Complete" after day 60
 - **Substack posts** — fetched from the RSS feed at load time via a CORS
   proxy, with a static fallback link if the fetch fails
+
+The **Medtronic section** is deliberately generalized: no internal project or
+system names, no confidential details, and only metrics evidenced in my own
+work files. Keep it that way when editing.
 
 ## Deploying changes
 
