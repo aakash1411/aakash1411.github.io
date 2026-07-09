@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aakash Shah — Applied AI / Forward-Deployed Engineer</title>
-  <meta name="description" content="Aakash Shah builds LLM systems that survive contact with production — five years of applied AI inside Medtronic Diabetes, clinical-AI compliance tooling, and agent-reliability research. Open to forward-deployed and applied AI roles.">
+  <meta name="description" content="Aakash Shah builds LLM systems that survive contact with production — Senior AI Engineer at MiniMed, five years of applied AI across Medtronic Diabetes and MiniMed, clinical-AI compliance tooling, and agent-reliability research.">
   <meta property="og:title" content="Aakash Shah — Applied AI / Forward-Deployed Engineer">
-  <meta property="og:description" content="AI that survives contact with production. Applied AI at Medtronic Diabetes, ClinicSentry, StressBench — regulated-healthcare AI shipped end-to-end.">
+  <meta property="og:description" content="AI that survives contact with production. Senior AI Engineer at MiniMed; applied AI across Medtronic Diabetes and MiniMed, ClinicSentry, StressBench.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aakash1411.github.io">
   <meta name="twitter:card" content="summary">
@@ -22,7 +22,8 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Aakash Shah",
-    "jobTitle": "Applied AI Engineer",
+    "jobTitle": "Senior AI Engineer",
+    "worksFor": { "@type": "Organization", "name": "MiniMed" },
     "url": "https://aakash1411.github.io",
     "email": "mailto:aakashs1411@gmail.com",
     "sameAs": [
@@ -221,6 +222,7 @@
     .log-rows li:nth-child(2) { animation-delay: 1.15s; }
     .log-rows li:nth-child(3) { animation-delay: 1.3s; }
     .log-rows li:nth-child(4) { animation-delay: 1.45s; }
+    .log-rows li:nth-child(5) { animation-delay: 1.6s; }
     .log-rows li:last-child { border-bottom: none; }
     .log-rows time { color: var(--muted); flex: none; font-size: 11px; }
     .log-rows .what { color: var(--bone); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -233,7 +235,7 @@
     .log-prompt {
       margin-top: 14px; font-family: var(--mono); font-size: 12.5px; color: var(--muted);
       display: flex; align-items: center; gap: 8px;
-      opacity: 0; animation: rise .6s var(--ease) 1.65s forwards;
+      opacity: 0; animation: rise .6s var(--ease) 1.78s forwards;
     }
     .caret { display: inline-block; width: 8px; height: 15px; background: var(--amber); animation: blinkSoft 1.1s steps(2, start) infinite; }
 
@@ -315,6 +317,11 @@
     .sec-intro { font-size: 15.5px; color: var(--dim); line-height: 1.75; max-width: 740px; margin: -24px 0 14px; }
     .sec-intro strong { color: var(--bone); font-weight: 400; }
     .sec-intro em { color: var(--muted); }
+    .org-head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin: 34px 0 4px; scroll-margin-top: 90px; }
+    .org-head.later { margin-top: 72px; }
+    .org-name { font-family: var(--serif); font-size: 26px; font-weight: 420; }
+    .org-meta { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 1px; }
+    .org-sub { font-size: 13.5px; color: var(--muted); margin-bottom: 4px; }
     .case-cols { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(20px, 3.5vw, 44px); margin-top: 18px; }
     .case-label { font-family: var(--mono); font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     .case-label::before { content: '▸ '; color: var(--amber); }
@@ -453,7 +460,7 @@
     <div class="container">
       <a href="#top" class="logo">aakash shah<span class="path"> / applied-ai</span></a>
       <ul class="nav-links">
-        <li><a href="#medtronic">Medtronic</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#work">Projects</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="#writing">Writing</a></li>
@@ -472,12 +479,13 @@
           <h1>AI that survives <em>contact with production.</em></h1>
           <p class="lede">
             I build LLM systems for places where a wrong answer costs something —
-            <strong>clinical workflows, compliance, live operations</strong>. Five years doing it
-            inside <strong>Medtronic Diabetes</strong>: taking ambiguous, regulated problems
-            end-to-end, from the first prototype to the audit trail.
+            <strong>clinical workflows, compliance, live operations</strong>. Five years of it in
+            diabetes tech — at Medtronic, and now at <strong>MiniMed as a Senior AI
+            Engineer</strong> — taking ambiguous, regulated problems end-to-end, from the first
+            prototype to the audit trail.
           </p>
           <div class="hero-actions">
-            <a href="#medtronic" class="btn btn-amber">View the work ↓</a>
+            <a href="#experience" class="btn btn-amber">View the work ↓</a>
             <a href="mailto:aakashs1411@gmail.com" class="btn btn-ghost">aakashs1411@gmail.com</a>
           </div>
         </div>
@@ -499,6 +507,12 @@
               <span class="what">stressbench · agent reliability</span>
               <span class="leader" aria-hidden="true"></span>
               <span class="st st-amber">PAPER IN PREP</span>
+            </li>
+            <li>
+              <time datetime="2026-07">2026·07→</time>
+              <span class="what">minimed · senior ai engineer</span>
+              <span class="leader" aria-hidden="true"></span>
+              <span class="st st-ok">ACTIVE</span>
             </li>
             <li>
               <time datetime="2026-02">2026·02→</time>
@@ -524,25 +538,35 @@
     <div class="container">
       <div class="proof-row">
         <span class="proof-item"><span class="cmd">$ pip install clinicsentry</span></span>
-        <span class="proof-item"><b>5</b> yrs applied AI at Medtronic Diabetes</span>
+        <span class="proof-item"><b>5</b> yrs applied AI · Medtronic → MiniMed</span>
         <span class="proof-item"><b>3</b> peer-reviewed publications</span>
         <span class="proof-item"><b>15</b> open-source agent skills</span>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════ MEDTRONIC ═══════════ -->
-  <section id="medtronic">
+  <!-- ═══════════ EXPERIENCE: MINIMED + MEDTRONIC ═══════════ -->
+  <section id="experience">
     <div class="container">
-      <div class="sec-label reveal"><span class="idx">01</span><span class="name">Medtronic — applied AI in regulated healthcare</span></div>
+      <div class="sec-label reveal"><span class="idx">01</span><span class="name">Experience — applied AI in regulated healthcare</span></div>
       <p class="sec-intro reveal">
-        Five years embedded with clinical, support, regulatory and platform teams at
-        <strong>Medtronic Diabetes</strong> (2021→2026). The pattern repeats: an ambiguous ask, no
-        spec, PHI everywhere, and a compliance bar most AI never clears. I take these problems
-        end-to-end — framing, data, model, guardrails, infrastructure, deployment — until they're
-        systems people rely on. <em>Details below are deliberately generalized to respect
-        confidentiality; deeper walkthroughs available in conversation.</em>
+        Five years embedded with clinical, support, regulatory and platform teams — at
+        <strong>Medtronic Diabetes</strong>, and now at <strong>MiniMed</strong>, the
+        diabetes-technology company standalone since April 2026, where I'm a Senior AI Engineer
+        leading the AI Excellence Center within the CareLink platform.
+        The pattern repeats: an ambiguous ask, no spec, PHI everywhere, and a compliance bar most
+        AI never clears. I take these problems end-to-end — framing, data, model, guardrails,
+        infrastructure, deployment — until they're systems people rely on. <em>Details below are
+        deliberately generalized to respect confidentiality; deeper walkthroughs available in
+        conversation.</em>
       </p>
+
+      <div class="org-head reveal" id="minimed">
+        <h3 class="org-name">MiniMed</h3>
+        <span class="org-meta">Senior AI Engineer · AI Excellence Center · Jul 2026 →</span>
+        <span class="badge badge-prod"><span class="bdot" aria-hidden="true"></span>Current</span>
+      </div>
+      <p class="org-sub reveal">Medtronic's diabetes business, standalone since April 2026 — work from the April cutover onward sits here. I lead the AI Excellence Center within the CareLink platform.</p>
 
       <!-- M01 — RAG support assistant -->
       <article class="work-row reveal">
@@ -580,43 +604,10 @@
         </div>
       </article>
 
-      <!-- M02 — privacy-safe clinical LLM services -->
-      <article class="work-row reveal">
-        <div>
-          <div class="work-num" aria-hidden="true">02</div>
-          <div class="work-meta">
-            <span class="badge badge-research"><span class="bdot" aria-hidden="true"></span>Clinical data</span>
-            <span class="work-year">Deploy-ready</span>
-          </div>
-        </div>
-        <div class="work-body">
-          <h3>Privacy-safe clinical LLM services <span class="sub">— AI where PHI usually stops it</span></h3>
-          <div class="case-cols">
-            <div class="case-problem">
-              <p class="case-label">The problem</p>
-              <p>Clinicians drown in raw device telemetry and can't ask simple cohort questions in
-              plain English. PHI makes most AI approaches a non-starter before they begin.</p>
-            </div>
-            <div class="case-shipped">
-              <p class="case-label">What I shipped</p>
-              <p>Two serverless LLM services: a patient-data summarizer, and a natural-language query
-              engine that compiles plain English into an <strong>executable, validated filter
-              DSL</strong>. Every request passes through PHI redaction, KMS encryption and audit
-              logging behind a versioned OpenAPI contract — the compliance last mile solved first,
-              not bolted on.</p>
-            </div>
-          </div>
-          <p class="work-proof">PHI redaction + KMS + audit on every request &nbsp;·&nbsp; plain English → executable cohort filters</p>
-          <div class="work-foot">
-            <div class="tags"><span>Bedrock</span><span>Lambda</span><span>KMS</span><span>API Gateway</span><span>OpenAPI</span></div>
-          </div>
-        </div>
-      </article>
-
       <!-- M03 — regulatory intelligence -->
       <article class="work-row reveal">
         <div>
-          <div class="work-num" aria-hidden="true">03</div>
+          <div class="work-num" aria-hidden="true">02</div>
           <div class="work-meta">
             <span class="badge badge-research"><span class="bdot" aria-hidden="true"></span>Regulatory intel</span>
             <span class="work-year">Deployed</span>
@@ -646,44 +637,10 @@
         </div>
       </article>
 
-      <!-- M04 — release engineering automation -->
-      <article class="work-row reveal">
-        <div>
-          <div class="work-num" aria-hidden="true">04</div>
-          <div class="work-meta">
-            <span class="badge badge-research"><span class="bdot" aria-hidden="true"></span>Regulated QA</span>
-            <span class="work-year">In internal use</span>
-          </div>
-        </div>
-        <div class="work-body">
-          <h3>Release-engineering automation platform <span class="sub">— GenAI drafts, humans sign off</span></h3>
-          <div class="case-cols">
-            <div class="case-problem">
-              <p class="case-label">The problem</p>
-              <p>Preparing regulated release documentation meant reconciling a PLM system against an
-              issue tracker by hand — weeks of error-prone work where one missed inconsistency
-              surfaces later, in an audit.</p>
-            </div>
-            <div class="case-shipped">
-              <p class="case-label">What I shipped</p>
-              <p>A full-stack React + FastAPI platform with <strong>15 tools</strong>: GenAI-assisted
-              document drafting and review kept strictly behind human sign-off, automated
-              traceability and cross-system consistency checks between PLM and issue tracking, and
-              long-running jobs streamed live over WebSockets. Dockerized, enterprise-authenticated,
-              adopted for real release work.</p>
-            </div>
-          </div>
-          <p class="work-proof">15 tools &nbsp;·&nbsp; PLM ↔ issue-tracker reconciliation automated &nbsp;·&nbsp; GenAI drafts, humans decide</p>
-          <div class="work-foot">
-            <div class="tags"><span>React 18</span><span>FastAPI</span><span>WebSockets</span><span>Jira</span><span>Windchill PLM</span><span>Bedrock</span></div>
-          </div>
-        </div>
-      </article>
-
       <!-- M05 — root-cause timeline -->
       <article class="work-row reveal">
         <div>
-          <div class="work-num" aria-hidden="true">05</div>
+          <div class="work-num" aria-hidden="true">03</div>
           <div class="work-meta">
             <span class="badge badge-research"><span class="bdot" aria-hidden="true"></span>Support ops</span>
             <span class="work-year">Deploy-ready</span>
@@ -715,7 +672,7 @@
       <!-- M06 — glucose insights engine -->
       <article class="work-row reveal">
         <div>
-          <div class="work-num" aria-hidden="true">06</div>
+          <div class="work-num" aria-hidden="true">04</div>
           <div class="work-meta">
             <span class="badge badge-research"><span class="bdot" aria-hidden="true"></span>Clinical ML</span>
             <span class="work-year">Feasibility</span>
@@ -747,9 +704,87 @@
       </article>
 
       <p class="case-more reveal">
-        <b>Also at Medtronic:</b> predictive glucose-event ML (XGBoost), closed-loop therapy
-        simulation, PHI-free synthetic data generation, SOP-driven validation of AI coding tools,
-        an internal MCP-based AI-tooling provisioning platform, and a centralized patient data lake.
+        <b>Also at MiniMed:</b> PHI-free synthetic data generation, SOP-driven validation of AI
+        coding tools, an internal MCP-based AI-tooling provisioning platform, and org-wide
+        agentic-AI enablement (incl. Devin by Cognition) with junior-engineer mentoring.
+      </p>
+
+      <div class="org-head later reveal">
+        <h3 class="org-name">Medtronic</h3>
+        <span class="org-meta">Diabetes operating unit · 2021 → Mar 2026</span>
+      </div>
+      <p class="org-sub reveal">Where the foundation was laid: clinical ML, data platforms, and the first GenAI systems.</p>
+
+      <!-- M05 — privacy-safe clinical LLM services -->
+      <article class="work-row reveal">
+        <div>
+          <div class="work-num" aria-hidden="true">05</div>
+          <div class="work-meta">
+            <span class="badge badge-research"><span class="bdot" aria-hidden="true"></span>Clinical data</span>
+            <span class="work-year">Deploy-ready</span>
+          </div>
+        </div>
+        <div class="work-body">
+          <h3>Privacy-safe clinical LLM services <span class="sub">— AI where PHI usually stops it</span></h3>
+          <div class="case-cols">
+            <div class="case-problem">
+              <p class="case-label">The problem</p>
+              <p>Clinicians drown in raw device telemetry and can't ask simple cohort questions in
+              plain English. PHI makes most AI approaches a non-starter before they begin.</p>
+            </div>
+            <div class="case-shipped">
+              <p class="case-label">What I shipped</p>
+              <p>Two serverless LLM services: a patient-data summarizer, and a natural-language query
+              engine that compiles plain English into an <strong>executable, validated filter
+              DSL</strong>. Every request passes through PHI redaction, KMS encryption and audit
+              logging behind a versioned OpenAPI contract — the compliance last mile solved first,
+              not bolted on.</p>
+            </div>
+          </div>
+          <p class="work-proof">PHI redaction + KMS + audit on every request &nbsp;·&nbsp; plain English → executable cohort filters</p>
+          <div class="work-foot">
+            <div class="tags"><span>Bedrock</span><span>Lambda</span><span>KMS</span><span>API Gateway</span><span>OpenAPI</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- M06 — release engineering automation -->
+      <article class="work-row reveal">
+        <div>
+          <div class="work-num" aria-hidden="true">06</div>
+          <div class="work-meta">
+            <span class="badge badge-research"><span class="bdot" aria-hidden="true"></span>Regulated QA</span>
+            <span class="work-year">In internal use</span>
+          </div>
+        </div>
+        <div class="work-body">
+          <h3>Release-engineering automation platform <span class="sub">— GenAI drafts, humans sign off</span></h3>
+          <div class="case-cols">
+            <div class="case-problem">
+              <p class="case-label">The problem</p>
+              <p>Preparing regulated release documentation meant reconciling a PLM system against an
+              issue tracker by hand — weeks of error-prone work where one missed inconsistency
+              surfaces later, in an audit.</p>
+            </div>
+            <div class="case-shipped">
+              <p class="case-label">What I shipped</p>
+              <p>A full-stack React + FastAPI platform with <strong>15 tools</strong>: GenAI-assisted
+              document drafting and review kept strictly behind human sign-off, automated
+              traceability and cross-system consistency checks between PLM and issue tracking, and
+              long-running jobs streamed live over WebSockets. Dockerized, enterprise-authenticated,
+              adopted for real release work.</p>
+            </div>
+          </div>
+          <p class="work-proof">documentation &amp; prototyping turnaround: 7–8 weeks → 3–5 days &nbsp;·&nbsp; 15 tools &nbsp;·&nbsp; GenAI drafts, humans decide</p>
+          <div class="work-foot">
+            <div class="tags"><span>React 18</span><span>FastAPI</span><span>WebSockets</span><span>Jira</span><span>Windchill PLM</span><span>Bedrock</span></div>
+          </div>
+        </div>
+      </article>
+
+      <p class="case-more reveal">
+        <b>Earlier at Medtronic:</b> predictive glucose-event ML (XGBoost), closed-loop therapy
+        simulation, and a centralized patient data lake.
       </p>
     </div>
   </section>
