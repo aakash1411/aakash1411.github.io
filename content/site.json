@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "Aakash Shah — Applied AI / Forward-Deployed Engineer",
+    "description": "Aakash Shah builds LLM systems that survive contact with production — Senior AI Engineer at MiniMed, five years of applied AI across Medtronic Diabetes and MiniMed, clinical-AI compliance tooling, and agent-reliability research.",
+    "ogDescription": "AI that survives contact with production. Senior AI Engineer at MiniMed; applied AI across Medtronic Diabetes and MiniMed, ClinicSentry, StressBench.",
+    "url": "https://aakash1411.github.io",
+    "jsonld": {
+      "name": "Aakash Shah",
+      "jobTitle": "Senior AI Engineer",
+      "worksFor": "MiniMed",
+      "email": "mailto:aakashs1411@gmail.com",
+      "sameAs": [
+        "https://github.com/aakash1411",
+        "https://www.linkedin.com/in/aakashs14/",
+        "https://medium.com/@aakashs11",
+        "https://humanloopai.substack.com"
+      ]
+    }
+  },
+  "nav": {
+    "logo": "aakash shah",
+    "logoPath": " / applied-ai",
+    "links": [
+      { "label": "Experience", "href": "#experience" },
+      { "label": "Projects", "href": "#work" },
+      { "label": "Research", "href": "#research" },
+      { "label": "Writing", "href": "#writing" },
+      { "label": "Contact", "href": "#contact" }
+    ],
+    "statusPill": { "label": "Open to FDE roles", "href": "#contact" }
+  },
+  "hero": {
+    "overline": "Applied AI · Forward-Deployed Engineering",
+    "title": "AI that survives *contact with production.*",
+    "lede": "I build LLM systems for places where a wrong answer costs something — **clinical workflows, compliance, live operations**. Five years of it in diabetes tech — at Medtronic, and now at **MiniMed as a Senior AI Engineer** — taking ambiguous, regulated problems end-to-end, from the first prototype to the audit trail.",
+    "actions": [
+      { "label": "View the work ↓", "href": "#experience", "style": "amber" },
+      { "label": "aakashs1411@gmail.com", "href": "mailto:aakashs1411@gmail.com", "style": "ghost" }
+    ]
+  },
+  "deployLog": [
+    { "time": "2026·06", "what": "clinicsentry v0.3.0", "status": "SHIPPED", "tone": "ok" },
+    { "time": "2026·07", "what": "stressbench · agent reliability", "status": "PAPER IN PREP", "tone": "amber" },
+    { "time": "2026·07→", "what": "minimed · senior ai engineer", "status": "ACTIVE", "tone": "ok" },
+    { "time": "2026·02→", "what": "krystina · discord ops bot", "status": "IN PRODUCTION", "tone": "ok" },
+    { "time": "2021→26", "what": "medtronic · applied-ai case files", "status": "SHIPPED", "tone": "ok" }
+  ],
+  "proof": [
+    { "cmd": "$ pip install clinicsentry" },
+    { "big": "5", "text": "yrs applied AI · Medtronic → MiniMed" },
+    { "big": "3", "text": "peer-reviewed publications" },
+    { "big": "15", "text": "open-source agent skills" }
+  ],
+  "contact": {
+    "sectionIndex": "06",
+    "heading": "Deploy me *somewhere hard.*",
+    "pitch": "I'm looking for forward-deployed and applied AI roles where the model meets messy reality — regulated data, live users, systems that must not fail quietly. If that's your product, I'd like to hear about it.",
+    "links": [
+      { "label": "Email", "value": "aakashs1411@gmail.com", "href": "mailto:aakashs1411@gmail.com" },
+      { "label": "GitHub", "value": "github.com/aakash1411", "href": "https://github.com/aakash1411" },
+      { "label": "LinkedIn", "value": "linkedin.com/in/aakashs14", "href": "https://www.linkedin.com/in/aakashs14/" },
+      { "label": "Medium", "value": "medium.com/@aakashs11", "href": "https://medium.com/@aakashs11" },
+      { "label": "Substack", "value": "humanloopai.substack.com", "href": "https://humanloopai.substack.com" }
+    ]
+  },
+  "footer": {
+    "left": "© {year} Aakash Shah — content in JSON, design in a template, no frameworks, no trackers",
+    "right": "hosted free on GitHub Pages"
+  }
+}

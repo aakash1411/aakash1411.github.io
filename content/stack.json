@@ -1,0 +1,26 @@
+{
+  "sectionIndex": "05",
+  "sectionName": "Working stack",
+  "clusters": [
+    {
+      "index": "A/",
+      "name": "LLM systems",
+      "items": ["RAG & hybrid retrieval", "AWS Bedrock", "Agents & tool-calling", "MCP", "LangGraph", "LangChain", "Evals — golden sets · RAGAS · custom verifiers", "Guardrails & PHI/PII", "Model routing & prompt caching", "Fine-tuning — QLoRA · Unsloth"]
+    },
+    {
+      "index": "B/",
+      "name": "Serving, data & backend",
+      "items": ["Python", "FastAPI", "TypeScript / Node.js", "Lambda & Step Functions", "OpenSearch", "DynamoDB", "Redshift & Glue ETL", "PostgreSQL + pgvector", "Redis", "vLLM", "Ollama", "OpenAI / Anthropic APIs"]
+    },
+    {
+      "index": "C/",
+      "name": "Observability & ops",
+      "items": ["CloudFormation IaC", "KMS & audit logging", "Langfuse", "LangSmith", "OpenTelemetry", "Grafana", "Weights & Biases", "MLflow", "Docker", "GitHub Actions", "Railway"]
+    },
+    {
+      "index": "D/",
+      "name": "Product & integration",
+      "items": ["Next.js / React", "Angular", "Tauri", "Flutter", "SwiftUI", "Discord / Slack bots", "Gmail & Calendar APIs", "Azure AD / Entra ID SSO", "OAuth + Keychain"]
+    }
+  ]
+}
