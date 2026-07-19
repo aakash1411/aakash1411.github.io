@@ -3,36 +3,53 @@
 Personal portfolio for Applied AI / Forward-Deployed Engineering roles.
 Live at **https://aakash1411.github.io**.
 
-## Stack
+## How it works — content and design are separate
 
-- One static `index.html` — no framework, no build step, no trackers
-- Google Fonts (Fraunces, Archivo, IBM Plex Mono)
-- Hosted free on **GitHub Pages**
-
-## Editing
-
-Everything lives in `index.html` (inline CSS + JS). The notable dynamic bits:
-
-- **Deploy log** (hero) — hand-edited list of current statuses
-- **Substack posts** — fetched from the RSS feed at load time via a CORS
-  proxy, with a static fallback link if the fetch fails
-
-The **Medtronic section** is deliberately generalized: no internal project or
-system names, no confidential details, and only metrics evidenced in my own
-work files. Keep it that way when editing.
-
-## Deploying changes
-
-```bash
-git add -A && git commit -m "update site" && git push
+```
+content/            ← EDIT THESE (all site text lives here)
+  site.json         hero, nav, deploy log, proof strip, contact, footer
+  experience.json   MiniMed / Medtronic org blocks + case files
+  projects.json     open-source & independent builds
+  research.json     publications (published work only)
+  writing.json      Substack / Medium / LinkedIn links
+  stack.json        working-stack clusters
+src/template.html   ← design (CSS/JS) — rarely touched
+static/             ← favicon, 404, .nojekyll
+build.js            ← renders content into the template → dist/ (no dependencies)
 ```
 
-GitHub Pages redeploys automatically within a minute or two.
+**To change site text:** edit the relevant `content/*.json`, commit, push.
+GitHub Actions runs `node build.js` and deploys automatically — you can even
+edit the JSON directly in the GitHub web UI.
+
+Inline formatting inside content strings: `**bold**`, `*italic*`,
+`[link text](https://url)`. Everything else is escaped automatically, so
+content can never break the page.
+
+**The build validates before deploying.** It fails (and blocks deploy) on:
+missing required fields, malformed links, leftover template slots, and
+forbidden strings — `[METRIC NEEDED]` placeholders and internal Medtronic
+system names that must never appear publicly.
+
+## Local preview
+
+```bash
+node build.js                                    # → dist/
+/usr/bin/python3 -m http.server 4173 -d dist     # open http://localhost:4173
+```
+
+## Editing rules for the experience section
+
+- Content mirrors `~/Documents/work-evidence-output/MASTER_WORK_EXPERIENCE.md`
+  (the source of truth). Keep the two telling the same story.
+- Generalized only: no internal project/system names, no confidential details,
+  no roadmap dates; metrics must be evidenced (master doc) or self-published.
+- `research.json` lists **published** work only — DOIs required.
 
 ## Custom domain (optional, later)
 
-1. Buy a domain, add a `CNAME` file to this repo containing it
-2. At your registrar: `A` records → GitHub Pages IPs, or `CNAME` → `aakash1411.github.io`
+1. Add a `CNAME` file to `static/` containing your domain
+2. At your registrar: `CNAME` record → `aakash1411.github.io`
 3. Repo **Settings → Pages** → set the domain, enforce HTTPS
 
 ## License

@@ -1,0 +1,25 @@
+{
+  "sectionIndex": "03",
+  "sectionName": "Research & publications",
+  "publications": [
+    {
+      "year": "2025",
+      "title": "Medical device shelf-life and recalls: navigating healthcare challenges",
+      "venue": "Expert Review of Medical Devices",
+      "href": "https://doi.org/10.1080/17434440.2025.2576140"
+    },
+    {
+      "year": "2025",
+      "title": "Software as Medical Devices: requirements and regulatory landscape in the United States",
+      "venue": "Expert Review of Medical Devices",
+      "href": "https://doi.org/10.1080/17434440.2025.2561918"
+    },
+    {
+      "year": "2023",
+      "title": "Using Continuous Glucose Monitoring Values for Bolus Size Calculation in Smart Multiple Daily Injection Systems: No Negative Impact on Post-bolus Glycemic Outcomes Found in Real-World Data",
+      "venue": "Journal of Diabetes Science and Technology",
+      "href": "https://doi.org/10.1177/19322968231202803"
+    }
+  ],
+  "note": "**Only published, citable work is listed.** Manuscripts in preparation (agent reliability, retrieval benchmarking) will appear here when they do. Before LLMs: medical-device software — including smart insulin-dosing algorithms — where I learned to treat software failure as a safety problem, not a bug ticket."
+}

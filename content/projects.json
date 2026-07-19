@@ -1,0 +1,72 @@
+{
+  "sectionIndex": "02",
+  "sectionName": "Open source & independent builds",
+  "rows": [
+    {
+      "badge": { "label": "OSS · Apache-2.0", "type": "oss" },
+      "year": "2026 · v0.3.0",
+      "title": "ClinicSentry",
+      "subtitle": "compliance middleware for clinical AI agents",
+      "desc": "An open-source Python library that sits between any agent framework — LangGraph, CrewAI, OpenAI Agents SDK, Claude SDK, MCP — and the outside world, enforcing clinical guardrails without touching agent code. A **PHI firewall** with adversarial normalization (homoglyphs, zero-width characters, base64 payloads), a **risk-tiered escalation router** that fails closed, and a **tamper-evident HMAC audit chain**, mapped clause-by-clause to HIPAA, FDA TPLC, IEC 62304 and the EU AI Act. Backed by a separate benchmark harness: six benchmark families covering detection F1, adversarial robustness, latency and compliance correctness.",
+      "proof": "~0.7 ms p95 PHI scan on 3 KB notes · zero LLM calls on the hot path · 4 regulatory frameworks auto-checked",
+      "links": [{ "label": "Code ↗", "href": "https://github.com/aakash1411/clinicsentry" }],
+      "chips": ["pip install clinicsentry"],
+      "tags": ["Python", "Presidio", "OpenTelemetry", "Grafana", "Docker"]
+    },
+    {
+      "badge": { "label": "Research", "type": "research" },
+      "year": "2026 · in prep",
+      "title": "StressBench",
+      "subtitle": "when agents pass the parser but fail the task",
+      "desc": "An evaluation harness that stress-tests LLM agents under injected faults and reports two numbers side by side: **strict_pass** (the answer matched the format and tool-call protocol) and **verified** (an action-metamorphic verifier recomputed the true end-state from the tool outputs the agent actually saw). The gap between them — **format-without-correctness** — is the headline metric. Compares ReAct, native function-calling, calibration and verifier-in-the-loop remediation agents, with bootstrap CIs, McNemar + Holm correction, and calibration error.",
+      "proof": "16 verifier task families · 9 injected fault types · dual strict/verified reporting",
+      "links": [],
+      "chips": ["Paper in preparation"],
+      "tags": ["Python", "ReAct", "Fault injection", "BFCL"]
+    },
+    {
+      "badge": { "label": "Private build", "type": "private" },
+      "year": "2026",
+      "title": "Icarus",
+      "subtitle": "a JARVIS-style assistant that runs entirely on my Mac",
+      "desc": "Local-first, multi-agent personal assistant with a full voice loop: mlx-whisper speech-to-text on the Apple Silicon GPU, an **orchestrator routing across specialist agents** — email, calendar, news, finance, code, Mac control, memory — on Ollama qwen3, and Kokoro TTS answering in a British JARVIS voice. **Five risk tiers gate every action**: risky operations pause on an approval queue, destructive ones are hard-blocked. Reachable from my iPhone as a PWA over LAN; escalates heavy tasks to Claude only when told to.",
+      "proof": "~0.3 s transcription · ~2 s speech synthesis warm · $0/month runtime · 5 risk tiers with approval queue",
+      "links": [],
+      "chips": ["Demo on request"],
+      "tags": ["FastAPI", "pgvector", "Ollama", "mlx-whisper", "Next.js"]
+    },
+    {
+      "badge": { "label": "In production", "type": "prod" },
+      "year": "2026 · Railway",
+      "title": "Krystina",
+      "subtitle": "a Discord ops assistant with a human veto on every message",
+      "desc": "The operations bot for a real motorcycle club. It plans the monthly group-ride messaging pipeline from Google Calendar, computes deterministic ride-role assignments, and handles plain-English admin requests — *\"move the poll reminder to July 2\"*, *\"DM Wes to bring the first-aid kit\"* — routed through gpt-4o-mini. **Nothing reaches the club without an Accept / Change / Cancel confirmation** DM'd to both admins: buttons persist for 72 hours across redeploys, plain-English edits are applied and re-confirmed, and stalled pipeline steps self-heal on later runs.",
+      "proof": "running since Feb 2026 · every outbound message human-approved · state survives restarts & redeploys",
+      "links": [{ "label": "Code ↗", "href": "https://github.com/aakash1411/holonet" }],
+      "chips": [],
+      "tags": ["Node.js", "Discord.js", "OpenAI", "Google Calendar", "Railway"]
+    },
+    {
+      "badge": { "label": "Private build", "type": "private" },
+      "year": "2026",
+      "title": "Icarus Job Search",
+      "subtitle": "an operator console that can't lie on your resume",
+      "desc": "A local-first Mac desktop app (Tauri + Next.js + FastAPI + SQLite) for running a serious job search. Pulls real openings from public ATS APIs (Greenhouse, Ashby), scores fit and visa sponsorship with negation-aware detection, and tailors resumes under a hard **truthfulness constraint: every exported bullet must trace back to the master resume or an approved fact, or the export is blocked**. Gmail OAuth tokens live in the macOS Keychain, outreach drafts require human approval, and LinkedIn automation deliberately doesn't exist.",
+      "proof": "every resume claim provenance-checked · approval gates on all sends · secrets in Keychain, never on disk",
+      "links": [],
+      "chips": ["Demo on request"],
+      "tags": ["Tauri", "Next.js", "FastAPI", "SQLite", "Gmail API"]
+    },
+    {
+      "badge": { "label": "Open source", "type": "oss" },
+      "year": "2026",
+      "title": "Agent Skills",
+      "subtitle": "packaged judgment for AI coding agents",
+      "desc": "A library of 15 reusable skills for AI coding agents (Claude Code, Cursor, Windsurf): TDD enforcement, structured root-cause analysis, CI/CD generation, resilience patterns, container optimization, secrets management. Each skill encodes a senior engineer's checklist as instructions an agent actually follows — installable globally or per-workspace with one command.",
+      "proof": "15 skills across the SDLC · single-command install · works across agent tools",
+      "links": [{ "label": "Code ↗", "href": "https://github.com/aakash1411/agent-skills" }],
+      "chips": [],
+      "tags": ["Markdown", "Shell", "GitHub Actions"]
+    }
+  ]
+}

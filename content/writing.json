@@ -1,0 +1,15 @@
+{
+  "sectionIndex": "04",
+  "sectionName": "Writing",
+  "heading": "Human in the Loop",
+  "headingLink": { "label": "Substack ↗", "href": "https://humanloopai.substack.com" },
+  "sub": "Field notes from building AI systems that have to work.",
+  "feedUrl": "https://humanloopai.substack.com/feed",
+  "fallbackPosts": [
+    { "title": "Why I Built 15 Skills for AI Coding Agents", "href": "https://substack.com/home/post/p-189421140" }
+  ],
+  "chips": [
+    { "label": "Medium · engineering case studies ↗", "href": "https://medium.com/@aakashs11" },
+    { "label": "LinkedIn · build notes ↗", "href": "https://www.linkedin.com/in/aakashs14/" }
+  ]
+}

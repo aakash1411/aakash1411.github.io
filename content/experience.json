@@ -1,0 +1,137 @@
+{
+  "sectionIndex": "01",
+  "sectionName": "Experience — applied AI in regulated healthcare",
+  "intro": "Five years embedded with clinical, support, regulatory and platform teams — at **Medtronic Diabetes**, and now at **MiniMed**, the diabetes-technology company spun out of Medtronic, where I'm a Senior AI Engineer leading the AI Excellence Center within the CareLink platform. The pattern repeats: an ambiguous ask, no spec, PHI everywhere, and a compliance bar most AI never clears. I take these problems end-to-end — framing, data, model, guardrails, infrastructure, deployment — until they're systems people rely on. *Details below are deliberately generalized to respect confidentiality; deeper walkthroughs available in conversation.*",
+  "orgs": [
+    {
+      "id": "minimed",
+      "name": "MiniMed",
+      "meta": "Senior AI Engineer · Cloud R&D · Jun 2026 →",
+      "badge": "Current",
+      "sub": "Medtronic's diabetes business, now standalone. I lead the AI Excellence Center within the CareLink platform — applied-AI product work plus the platform engineering that standardizes AI tooling and autonomous agents across teams.",
+      "cases": [
+        {
+          "badge": "Patient support",
+          "status": "Production-ready",
+          "title": "Grounded support assistant",
+          "subtitle": "RAG that can't invent device instructions",
+          "problem": "A diabetes-device companion app generates thousands of repetitive, safety-sensitive support questions. Support teams can't scale with them — and a chatbot that invents medical-device instructions isn't a UX bug, it's a patient-safety incident.",
+          "shipped": "A grounded RAG service on AWS Bedrock: **hybrid retrieval** (70% vector / 30% BM25) over OpenSearch with Cohere reranking (top-20 → top-5) and parent-document expansion; generation locked to approved documentation — verbatim citations, novel numbers rejected by a hallucination filter. A DynamoDB-backed semantic cache skips embed/search/rerank on similar queries (~800 ms saved); query-aware routing sends ~30% of traffic to a fast model, with extractive context compression (−34% input tokens) and prompt caching; an inline relevancy judge rejects bad context at zero extra LLM calls. PII detection, prompt-injection blocking and out-of-scope refusal guard the edges — and **every deploy is gated on a 129-question golden-set eval harness**.",
+          "proof": "−173 ms end-to-end P50 · −19% cost · ROUGE-L 0.556, 88.4% retrieval pass · 92% test coverage",
+          "tags": ["Bedrock", "OpenSearch", "Cohere Rerank", "DynamoDB", "Lambda", "CloudFormation"]
+        },
+        {
+          "badge": "Product concept",
+          "status": "Concept build",
+          "title": "AI-enabled companion-app concept",
+          "subtitle": "one app that adapts to the whole diabetes journey",
+          "problem": "Diabetes apps ship one static UI for every patient — overwhelming for newcomers, limiting for advanced users. A companion-app concept had to adapt terminology, settings and AI-driven insights across the full journey, and be buildable without ever touching PHI.",
+          "shipped": "A stage-adaptive Flutter + FastAPI app (~26 endpoints): stage-aware terminology that swaps clinical and plain language, a settings-derivation service auto-configuring glucose targets from journey stage plus Apple Health, meal-detection ML wired into personalized insights, frictionless meal logging (search / barcode / photo), and a **stage-parameterized synthetic-data generator** so development and demos run on realistic data with zero PHI.",
+          "proof": "4 journey stages · ~26 API endpoints · zero-PHI synthetic data end-to-end",
+          "tags": ["Flutter", "FastAPI", "Apple HealthKit", "Pandas", "Material 3"]
+        },
+        {
+          "badge": "Internal platform",
+          "status": "In internal use",
+          "title": "AI developer platform",
+          "subtitle": "AI-assistant config as versioned infrastructure",
+          "problem": "Every team configured AI coding assistants by hand — drifting setups, missed best practices, insecure MCP configs, secrets pasted where they shouldn't be, and slow onboarding.",
+          "shipped": "Declarative per-team manifests over a shared content library — **429 curated skills, rules and workflows** — applied by a one-command cross-platform installer: dry-run by default, timestamped backups, interactive secret prompting (tokens never committed), MCP server templating with per-team enable/disable, and onboarding docs auto-generated from the same source of truth.",
+          "proof": "3 engineering teams · 429 curated content items · setup ~1–2 hrs → minutes (est.)",
+          "tags": ["Python", "MCP", "Bash", "PowerShell"]
+        },
+        {
+          "badge": "Agent enablement",
+          "status": "Shipped design",
+          "title": "Autonomous-agent enablement",
+          "subtitle": "letting an external coding agent in — without opening the doors",
+          "problem": "Bringing an autonomous coding agent (Devin) into the org meant exposing an internal Bitbucket Data Center to an external agent cloud — with no private-link option, and no appetite for weakening security posture.",
+          "shipped": "A source-IP-preserving L4 reverse-proxy architecture exposing Bitbucket over HTTPS, locked to the agent cloud's **10 static egress IPs**, with least-privilege service-account tokens, WAF rate limiting, split-horizon DNS/TLS guidance and an IT verification runbook — plus coordination of the org-wide AI-IDE license cut-over.",
+          "proof": "10-IP allowlist, source IP preserved · least-privilege tokens · org-wide license cut-over",
+          "tags": ["AWS NLB", "WAF", "TLS / DNS", "Bitbucket DC"]
+        }
+      ],
+      "also": null
+    },
+    {
+      "id": "medtronic-cloud",
+      "name": "Medtronic",
+      "meta": "Diabetes Cloud R&D · Mar 2025 → Jun 2026",
+      "badge": null,
+      "sub": "Forward-deployed applied-AI engineering across the CareLink ecosystem and its data platform — AI microservices, a 15-tool release-engineering platform, PHI-safe LLM services, ML feasibility pipelines, and the regulated governance that lets AI ship in a medical-device org.",
+      "cases": [
+        {
+          "badge": "Regulated QA",
+          "status": "In internal use",
+          "title": "Release-engineering automation platform",
+          "subtitle": "GenAI drafts, humans sign off",
+          "problem": "A CareLink software release means generating and cross-checking a stack of regulated documents, linking Jira tickets, and reconciling fields between a PLM system and the issue tracker by hand — slow, error-prone work where one missed inconsistency surfaces late, in an audit.",
+          "shipped": "Self-initiated after discovery sessions with release owners: a full-stack React + FastAPI platform exposing **15 self-service tools** — regulated document generators, GenAI-assisted drafting and ticket review through an enterprise LLM gateway (human sign-off, always), automated requirement-to-test traceability and PLM ↔ Jira consistency checks — with a background task runner streaming long jobs live over WebSockets. Dockerized, enterprise-authenticated; maintenance transitioned to the two interns and junior engineer I mentored.",
+          "proof": "~80% of reg-prep automated, ~10% of prior effort · turnaround 7–8 weeks → 3–5 days · 15 tools",
+          "tags": ["React 18", "FastAPI", "WebSockets", "Jira · R4J", "Windchill PLM", "Bedrock"]
+        },
+        {
+          "badge": "Regulatory intel",
+          "status": "Deployed",
+          "title": "Regulatory-intelligence platform",
+          "subtitle": "watching eight regulators so humans don't have to",
+          "problem": "Regulatory and quality teams monitored eight international medical-device regulators — FDA, MHRA, Health Canada, TGA and more — by hand for recalls and safety communications that carry legal weight. Slow, inconsistent, and easy to miss.",
+          "shipped": "A serverless pipeline scraping all **8 sources in parallel** via Step Functions (date-chunked branches → consolidate → malware check → email), an LLM relevance classifier with a **deterministic keyword override** — the model never gets the last word — site-specific extraction for the awkward sources (strict body-text matching, manufacturer-PDF letters), and a React SPA behind enterprise SSO, provisioned via CloudFormation across test, QA and prod.",
+          "proof": "8 regulators → one on-demand report · manual sweep ~hours/week → on-demand (est.)",
+          "tags": ["Step Functions", "Bedrock", "React 19", "DynamoDB", "Azure AD"]
+        },
+        {
+          "badge": "Clinical data",
+          "status": "Deploy-ready",
+          "title": "Privacy-safe clinical LLM services",
+          "subtitle": "AI where PHI usually stops it",
+          "problem": "Clinicians drown in raw device telemetry and can't ask simple cohort questions in plain English. PHI makes most AI approaches a non-starter before they begin.",
+          "shipped": "Two serverless LLM services: a summarizer turning fragmented device JSON into a structured **7-section physician narrative**, and a natural-language query engine compiling plain English into a typed, validated filter DSL (operators, relative dates, JSON repair, temperature 0). Every request runs preprocess → **PHI redaction → KMS encryption → model → validated JSON**, with a sanitized audit trail behind a versioned OpenAPI contract — the compliance last mile solved first, not bolted on.",
+          "proof": "PHI redaction + customer-managed KMS + audit on every request · raw-JSON reading → a single glance (est.)",
+          "tags": ["Bedrock", "Lambda", "KMS", "API Gateway", "OpenAPI"]
+        },
+        {
+          "badge": "Support ops",
+          "status": "Deploy-ready",
+          "title": "Device-issue root-cause timeline",
+          "subtitle": "three log systems, one answer",
+          "problem": "To explain a single device issue, support agents cross-referenced three disjoint log systems — different schemas, dozens of event types, tribal knowledge required — and still couldn't see the sequence of events.",
+          "shipped": "Reverse-engineered **three undocumented device data sources** (~130 KB of exploration notes) into one model: Glue ETL consolidates warehouse unloads into PHI-aware partitioned Parquet (90-day TTL), a Lambda API behind a private gateway serves an Angular timeline with a severity fault tree, and **~70 device event types live in an editable severity catalog** with regex heuristics instead of hardcoded logic. Azure AD JWT auth and bcrypt-hashed patient IDs throughout.",
+          "proof": "3 log systems → one ranked view · ~70 event types as editable config · est. ~50% faster diagnosis",
+          "tags": ["Angular", "Glue ETL", "Parquet", "Lambda", "Azure AD"]
+        },
+        {
+          "badge": "Clinical ML",
+          "status": "Feasibility",
+          "title": "Glucose insights engine",
+          "subtitle": "from raw telemetry to a daily \"so what\"",
+          "problem": "Patients generate abundant glucose and insulin data but get little daily, personalized, actionable insight. The product team needed the feasibility question answered with evidence before betting a roadmap on it.",
+          "shipped": "An end-to-end feasibility pipeline: a warehouse SQL layer building **~12 intermediate tables** (patient qualification, a unified basal-delivery timeline), pharmacokinetic reconstruction of plasma insulin into a **72-feature vector**, a ported logistic-regression meal detector at 5-minute resolution with event grouping, and a two-pass insights engine producing per-meal glycemic metrics and device-specific 15/30-day status classifications — data lineage documented end to end.",
+          "proof": "72-feature model · ~12-table documented pipeline · 4 personalized insight types",
+          "tags": ["Python", "Redshift", "Parquet", "Logistic regression"]
+        }
+      ],
+      "also": "**Also in this era:** two FDA-committed deliverables enabling proactive sensor replacement, evaluation and enablement of 4 agentic coding tools across ~9 teams / 253 engineers (12+ workshops), LLM test-case extraction for regulated V&V (est. −70% effort), the SOP-compliant validation package that sanctioned an AI IDE for regulated use, a WAF-hardened public status page, a 22-board Flutter training prototype, a PHI-free synthetic device-data pipeline, and CareLink Pro Web localization."
+    },
+    {
+      "id": "medtronic-ds",
+      "name": "Medtronic",
+      "meta": "Diabetes Data Science · Oct 2021 → Mar 2025",
+      "badge": null,
+      "sub": "The classical-ML and data foundation the later AI systems stand on — predictive glucose modeling at scale, closed-loop simulation, clinical-study data engineering, and shared-platform enablement.",
+      "cases": [
+        {
+          "badge": "Clinical ML",
+          "status": "Models shipped",
+          "title": "Predictive glucose alerts",
+          "subtitle": "seeing hypo and hyper events before they happen",
+          "problem": "Hypo- and hyperglycemia events are preventable if you see them coming — but reactive alerts fire too late, and naive prediction drowns patients in alarms until they turn the feature off.",
+          "shipped": "Multi-class XGBoost models predicting hypo and hyper events **20–60 minutes ahead**, trained on **~13.6M CGM samples** with time-series feature engineering; alert packaging and post-processing for productization, and an alerts-per-day evaluation across prediction horizons to tune thresholds against alarm fatigue before anything reached a patient.",
+          "proof": "~13.6M training samples · 20–60 min horizons · alarm-fatigue-aware thresholds",
+          "tags": ["Python", "XGBoost", "CGM time-series"]
+        }
+      ],
+      "also": "**Also in this era:** closed-loop insulin-delivery simulation with announcement-free meal detection, a patient data lake (requirements, schemas, ingestion), clinical-study data support with a digital-twin component, an XGBoost attrition model, training-compliance dashboards serving ~800 learners, and shared-AWS platform enablement for ~4 teams (~$8K/month sustained cost reduction)."
+    }
+  ]
+}
