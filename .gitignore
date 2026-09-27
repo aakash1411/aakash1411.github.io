@@ -1,4 +1,9 @@
-.DS_Store
-.claude/
+# Dotfiles/folders (.claude, .devin, .windsurf, .env, .DS_Store, ...), except what deploy needs
+.*
+!.gitignore
+!.github/
+
+# Local-only notes and build output
+AGENTS.md
 portfolio-projects-plan.md
 dist/

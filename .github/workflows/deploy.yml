@@ -3,6 +3,10 @@ name: Build & deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    # Daily rebuild picks up new Substack/Medium posts.
+    # ponytail: GitHub pauses scheduled workflows after 60 days with no repo activity; re-enable in the Actions tab or push any commit.
+    - cron: '0 13 * * *'
   workflow_dispatch:
 
 permissions:
@@ -22,8 +26,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Test content parser
+        run: node --test src/
       - name: Build site (validates content)
         run: node build.js
+        env:
+          FORBIDDEN: ${{ secrets.FORBIDDEN }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
