@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 22
       - name: Test content parser
-        run: node --test src/
+        run: node --test
       - name: Build site (validates content)
         run: node build.js
         env:

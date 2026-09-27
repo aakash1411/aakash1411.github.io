@@ -98,7 +98,7 @@ newline-separated). CI fails if the secret is missing.
 ## Local preview
 
 ```bash
-node --test src/                                 # parser self-check
+node --test                                      # parser self-check
 node build.js                                    # -> dist/
 /usr/bin/python3 -m http.server 4173 -d dist     # open http://localhost:4173
 ```
